@@ -250,6 +250,10 @@ def main():
     (OUT / "img").mkdir(parents=True)
     for f in (ROOT / "src" / "img").iterdir():
         shutil.copy(f, OUT / "img" / f.name)
+    # 사이트 루트에 그대로 둘 파일(구글 사이트 인증 HTML, 나중에 app-ads.txt)
+    root_files = ROOT / "src" / "root"
+    for f in (root_files.iterdir() if root_files.exists() else []):
+        shutil.copy(f, OUT / f.name)
     w = lambda p, s: ((OUT / p).parent.mkdir(parents=True, exist_ok=True), (OUT / p).write_text(s))
     w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "대구의 1인 게임 개발 스튜디오. 라면 식는다, 쉬운 맞고.", HOME_KO, 0))
     w("en/index.html", page("en", f"{SITE['name_en']} — indie game studio", "A one-person game studio in Korea. Seconds Out, Ramen's Getting Cold, Easy Matgo.", HOME_EN, 1))
