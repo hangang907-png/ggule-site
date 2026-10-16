@@ -14,7 +14,7 @@ SITE = {
     "rep": "이규한",
     "rep_en": "Gyuhan Lee",
     "biz_no": "270-24-02767",
-    "mail_order_no": "",  # 통신판매업 신고번호: 신고증 나오면 채운다
+    "mail_order_no": "제2026-대구달서-1238호",  # 통신판매업 신고번호(10/16 달서구청)
     "addr_ko": "대구광역시 달서구 서당로7길 52, 4층 A006호",
     "addr_en": "4F A006, 52 Seodang-ro 7-gil, Dalseo-gu, Daegu, Republic of Korea",
     "tel": "070-8983-1793",
@@ -73,7 +73,8 @@ def page(lang, title, desc, body, path_depth):
     else:
         nav = f'<a href="{up}en/#games">Games</a><a href="{up}en/privacy/">Privacy</a><a href="{up}" lang="ko">한국어</a>'
         home = f"{up}en/"
-        foot = (f"<b>{s['name_en']}</b> (꿀 스튜디오) · Representative {s['rep_en']} · Business Reg. No. {s['biz_no']}<br>"
+        mo = f" · Mail-order Business Reg. No. {s['mail_order_no'][1:-1]} (Dalseo-gu, Daegu)" if s["mail_order_no"] else ""
+        foot = (f"<b>{s['name_en']}</b> (꿀 스튜디오) · Representative {s['rep_en']} · Business Reg. No. {s['biz_no']}{mo}<br>"
                 f"{s['addr_en']} · Tel +82-70-8983-1793 · <a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
                 f"<a href=\"{up}en/privacy/\"><b>Privacy Policy</b></a> · © 2026 {s['name_en']}")
         brand = s["name_en"]
