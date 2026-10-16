@@ -257,7 +257,7 @@ def main():
     w("en/privacy/index.html", page("en", f"Privacy Policy — {SITE['name_en']}", "Privacy policy for STUDIO GGULE games", PRIV_EN, 2))
     w("404.html", NOT_FOUND)
     w("favicon.svg", FAVICON)
-    w("CNAME", SITE["domain"] + "\n")
+    w("CNAME", SITE["domain"])
     w(".nojekyll", "")
     w("robots.txt", f"User-agent: *\nAllow: /\nSitemap: https://{SITE['domain']}/sitemap.xml\n")
     urls = ["", "en/", "privacy/", "en/privacy/"]
