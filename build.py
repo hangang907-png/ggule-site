@@ -108,12 +108,15 @@ def game(img, alt, title, tags, text, meta):
             f'<div class="body"><h3>{title}</h3>{t}<p>{text}</p><p class="meta">{meta}</p></div></article>')
 
 
-# ---------- 한국어 홈 (세컨즈 아웃은 국내 판매 제외라 싣지 않음) ----------
+# ---------- 한국어 홈 (세컨즈 아웃은 스팀 국내 판매 제외라 STOVE만 적는다) ----------
 HOME_KO = f"""
 <section class="hero"><h1>작고 단단한 게임을 만듭니다.</h1>
 <p>{SITE['name_ko']}는 대구의 1인 게임 개발 스튜디오입니다. 손에 금방 붙고, 한 판이 짧고, 다시 하고 싶어지는 게임을 만듭니다.</p></section>
 <h2 id="games">게임</h2>
 <div class="games">
+{game("img/seconds-out.webp", "세컨즈 아웃 대표 그림", "세컨즈 아웃", ["PC", "출시 예정"],
+      "마우스가 주먹이 되는 권투 게임. 손짓으로 잽·훅·어퍼를 뻗고, 코너에서 들려오는 세컨의 목소리를 따라 세컨드 윈드를 터뜨린다. 커리어는 단 한 번.",
+      "STOVE 출시 준비 중")}
 {game("img/ramen.webp", "라면 식는다 대표 그림", "라면 식는다", ["PC", "개발 중"],
       "괴수 영화의 주인공이 됐다. 그런데 아주 작다. 컵라면이 불기 전에 촬영을 끝내야 하는 괴수 특촬 복싱 액션.",
       "Steam · itch.io 출시 준비 중")}
@@ -255,7 +258,7 @@ def main():
     for f in (root_files.iterdir() if root_files.exists() else []):
         shutil.copy(f, OUT / f.name)
     w = lambda p, s: ((OUT / p).parent.mkdir(parents=True, exist_ok=True), (OUT / p).write_text(s))
-    w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "대구의 1인 게임 개발 스튜디오. 라면 식는다, 쉬운 맞고.", HOME_KO, 0))
+    w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "대구의 1인 게임 개발 스튜디오. 세컨즈 아웃, 라면 식는다, 쉬운 맞고.", HOME_KO, 0))
     w("en/index.html", page("en", f"{SITE['name_en']} — indie game studio", "A one-person game studio in Korea. Seconds Out, Ramen's Getting Cold, Easy Matgo.", HOME_EN, 1))
     w("privacy/index.html", page("ko", f"개인정보처리방침 — {SITE['name_ko']}", "꿀 스튜디오 게임의 개인정보처리방침", PRIV_KO, 1))
     w("en/privacy/index.html", page("en", f"Privacy Policy — {SITE['name_en']}", "Privacy policy for STUDIO GGULE games", PRIV_EN, 2))
