@@ -257,6 +257,10 @@ def main():
     root_files = ROOT / "src" / "root"
     for f in (root_files.iterdir() if root_files.exists() else []):
         shutil.copy(f, OUT / f.name)
+    # 브라우저에서 바로 하는 게임(원스토어 원플레이가 이 주소를 감싼다). 각 게임의 build_onestore.sh --site 가 채운다
+    play = ROOT / "src" / "play"
+    if play.exists():
+        shutil.copytree(play, OUT / "play")
     w = lambda p, s: ((OUT / p).parent.mkdir(parents=True, exist_ok=True), (OUT / p).write_text(s))
     w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "대구의 1인 게임 개발 스튜디오. 세컨즈 아웃, 라면 식는다, 쉬운 맞고.", HOME_KO, 0))
     w("en/index.html", page("en", f"{SITE['name_en']} — indie game studio", "A one-person game studio in Korea. Seconds Out, Ramen's Getting Cold, Easy Matgo.", HOME_EN, 1))
