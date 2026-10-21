@@ -6,7 +6,7 @@
 
 const PF = {
   sdk: null,
-  ad: '',          // 전면 광고 지면 ID(ONEconsole 수익화 > 인앱 광고에서 발급). 비어 있으면 광고를 띄우지 않는다
+  ad: 'xEKR3-JVSN-2ZAC-4PS2',          // 전면 광고 지면 ID(ONEconsole 수익화 > 인앱 광고에서 발급). 비어 있으면 광고를 띄우지 않는다
   adGap: 2,        // 장이 바뀔 때만, 1장이 끝난 뒤부터
   muted: false, booted: false, held: false, adToken: null,
 
