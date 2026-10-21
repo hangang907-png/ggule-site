@@ -17,7 +17,6 @@ SITE = {
     "mail_order_no": "제2026-대구달서-1238호",  # 통신판매업 신고번호(10/16 달서구청)
     "addr_ko": "대구광역시 달서구 서당로7길 52, 4층 A006호",
     "addr_en": "4F A006, 52 Seodang-ro 7-gil, Dalseo-gu, Daegu, Republic of Korea",
-    "tel": "070-8983-1793",
     "privacy_effective": "2026년 10월 16일",
     "privacy_effective_en": "October 16, 2026",
 }
@@ -67,15 +66,15 @@ def page(lang, title, desc, body, path_depth):
         home = up or "./"
         mo = f" · 통신판매업 신고 {s['mail_order_no']}" if s["mail_order_no"] else ""
         foot = (f"<b>{s['name_ko']}</b> ({s['name_en']}) · 대표 {s['rep']} · 사업자등록번호 {s['biz_no']}{mo}<br>"
-                f"{s['addr_ko']} · 전화 {s['tel']} · <a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
+                f"{s['addr_ko']} · <a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
                 f"<a href=\"{up}privacy/\"><b>개인정보처리방침</b></a> · © 2026 {s['name_ko']}")
         brand = s["name_ko"]
     else:
         nav = f'<a href="{up}en/#games">Games</a><a href="{up}en/privacy/">Privacy</a><a href="{up}" lang="ko">한국어</a>'
         home = f"{up}en/"
-        mo = f" · Mail-order Business Reg. No. {s['mail_order_no'][1:-1]} (Dalseo-gu, Daegu)" if s["mail_order_no"] else ""
+        mo = f" · Mail-order Business Reg. No. {s['mail_order_no'][1:-1]}" if s["mail_order_no"] else ""
         foot = (f"<b>{s['name_en']}</b> (꿀 스튜디오) · Representative {s['rep_en']} · Business Reg. No. {s['biz_no']}{mo}<br>"
-                f"{s['addr_en']} · Tel +82-70-8983-1793 · <a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
+                f"{s['addr_en']} · <a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
                 f"<a href=\"{up}en/privacy/\"><b>Privacy Policy</b></a> · © 2026 {s['name_en']}")
         brand = s["name_en"]
     return f"""<!doctype html>
@@ -111,7 +110,7 @@ def game(img, alt, title, tags, text, meta):
 # ---------- 한국어 홈 (세컨즈 아웃은 스팀 국내 판매 제외라 STOVE만 적는다) ----------
 HOME_KO = f"""
 <section class="hero"><h1>작고 단단한 게임을 만듭니다.</h1>
-<p>{SITE['name_ko']}는 대구의 1인 게임 개발 스튜디오입니다. 손에 금방 붙고, 한 판이 짧고, 다시 하고 싶어지는 게임을 만듭니다.</p></section>
+<p>{SITE['name_ko']}는 1인 게임 개발 스튜디오입니다. 손에 금방 붙고, 한 판이 짧고, 다시 하고 싶어지는 게임을 만듭니다.</p></section>
 <h2 id="games">게임</h2>
 <div class="games">
 {game("img/seconds-out.webp", "세컨즈 아웃 대표 그림", "세컨즈 아웃", ["PC", "출시 예정"],
@@ -130,7 +129,7 @@ HOME_KO = f"""
 
 HOME_EN = f"""
 <section class="hero"><h1>Small games, built to hit hard.</h1>
-<p>{SITE['name_en']} is a one-person game studio in Daegu, Korea. We make games that are quick to learn, short to play and hard to put down.</p></section>
+<p>{SITE['name_en']} is a one-person game studio in Korea. We make games that are quick to learn, short to play and hard to put down.</p></section>
 <h2 id="games">Games</h2>
 <div class="games">
 {game("../img/seconds-out.webp", "Seconds Out key art", "Seconds Out", ["PC", "Coming soon"],
@@ -193,7 +192,7 @@ PRIV_KO = f"""
 <p>문의 메일은 2단계 인증을 켠 계정에서만 열람하고, 열람할 수 있는 사람을 대표자로 한정합니다.</p>
 
 <h2>9. 개인정보 보호책임자</h2>
-<p>성명: {SITE['rep']} (대표) · 이메일: <a href="mailto:{SITE['email']}">{SITE['email']}</a> · 전화: {SITE['tel']}</p>
+<p>성명: {SITE['rep']} (대표) · 이메일: <a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
 <p>개인정보 침해 신고·상담: 개인정보침해신고센터(privacy.kisa.or.kr, 국번 없이 118), 개인정보분쟁조정위원회(www.kopico.go.kr, 1833-6972), 대검찰청(www.spo.go.kr, 1301), 경찰청(ecrm.police.go.kr, 182).</p>
 
 <h2>10. 변경</h2>
@@ -262,7 +261,7 @@ def main():
     if play.exists():
         shutil.copytree(play, OUT / "play")
     w = lambda p, s: ((OUT / p).parent.mkdir(parents=True, exist_ok=True), (OUT / p).write_text(s))
-    w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "대구의 1인 게임 개발 스튜디오. 세컨즈 아웃, 라면 식는다, 쉬운 맞고.", HOME_KO, 0))
+    w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "1인 게임 개발 스튜디오. 세컨즈 아웃, 라면 식는다, 쉬운 맞고.", HOME_KO, 0))
     w("en/index.html", page("en", f"{SITE['name_en']} — indie game studio", "A one-person game studio in Korea. Seconds Out, Ramen's Getting Cold, Easy Matgo.", HOME_EN, 1))
     w("privacy/index.html", page("ko", f"개인정보처리방침 — {SITE['name_ko']}", "꿀 스튜디오 게임의 개인정보처리방침", PRIV_KO, 1))
     w("en/privacy/index.html", page("en", f"Privacy Policy — {SITE['name_en']}", "Privacy policy for STUDIO GGULE games", PRIV_EN, 2))
