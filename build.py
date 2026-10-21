@@ -14,9 +14,7 @@ SITE = {
     "rep": "이규한",
     "rep_en": "Gyuhan Lee",
     "biz_no": "270-24-02767",
-    "mail_order_no": "제2026-대구달서-1238호",  # 통신판매업 신고번호(10/16 달서구청)
-    "addr_ko": "대구광역시 달서구 서당로7길 52, 4층 A006호",
-    "addr_en": "4F A006, 52 Seodang-ro 7-gil, Dalseo-gu, Daegu, Republic of Korea",
+    "mail_order_no": "",  # 통신판매업 신고번호는 영업 연락 때문에 사이트에 안 싣는다(10-21 사장님 결정, 주소도)
     "privacy_effective": "2026년 10월 16일",
     "privacy_effective_en": "October 16, 2026",
 }
@@ -66,7 +64,7 @@ def page(lang, title, desc, body, path_depth):
         home = up or "./"
         mo = f" · 통신판매업 신고 {s['mail_order_no']}" if s["mail_order_no"] else ""
         foot = (f"<b>{s['name_ko']}</b> ({s['name_en']}) · 대표 {s['rep']} · 사업자등록번호 {s['biz_no']}{mo}<br>"
-                f"{s['addr_ko']} · <a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
+                f"<a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
                 f"<a href=\"{up}privacy/\"><b>개인정보처리방침</b></a> · © 2026 {s['name_ko']}")
         brand = s["name_ko"]
     else:
@@ -74,7 +72,7 @@ def page(lang, title, desc, body, path_depth):
         home = f"{up}en/"
         mo = f" · Mail-order Business Reg. No. {s['mail_order_no'][1:-1]}" if s["mail_order_no"] else ""
         foot = (f"<b>{s['name_en']}</b> (꿀 스튜디오) · Representative {s['rep_en']} · Business Reg. No. {s['biz_no']}{mo}<br>"
-                f"{s['addr_en']} · <a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
+                f"<a href=\"mailto:{s['email']}\">{s['email']}</a><br>"
                 f"<a href=\"{up}en/privacy/\"><b>Privacy Policy</b></a> · © 2026 {s['name_en']}")
         brand = s["name_en"]
     return f"""<!doctype html>
@@ -232,7 +230,7 @@ PRIV_EN = f"""
 <p>You can ask us to access, correct, delete or stop processing your personal information at any time. Parents or guardians of children under 14 may make the same requests.</p>
 
 <h2>7. Contact</h2>
-<p>Privacy officer: {SITE['rep_en']} (Representative) · <a href="mailto:{SITE['email']}">{SITE['email']}</a> · {SITE['addr_en']}</p>
+<p>Privacy officer: {SITE['rep_en']} (Representative) · <a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
 
 <h2>8. Changes</h2>
 <p>We will post any changes on this page at least 7 days before they take effect. Effective {SITE['privacy_effective_en']}.</p>
