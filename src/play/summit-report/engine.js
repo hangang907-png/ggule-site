@@ -849,6 +849,7 @@ let newRunArmed = false;
 function act(a) {
   const [k, x, y] = a.split(':');
   AU.resume(); MUS.resume();
+  if (k === 'adlog') { const el = $('[data-act="adlog"]'); if (el && !el.dataset.shown) { el.dataset.shown = 1; el.insertAdjacentHTML('beforeend', `<br>광고 기록: ${esc(PF.adLog().join(' · ') || '없음')}`); } return; }
   if (k === 'music') { MUS.toggle(); const b = $('[data-act="music"]'); if (b) b.textContent = MUS.label(); return; }
   if (k === 'start') {
     const next = nextChapter() || (ledgerNew(), CH_ORDER[0]);
@@ -1040,7 +1041,7 @@ function showTitle() {
     <label><input type="checkbox" id="opt-exp"> 4장 실험 모드: 신호·배터리 끄기</label>
     <label>속도 <select id="opt-speed"><option value="1">1× — 1초 = 1분</option><option value="2">2×</option><option value="0.5">0.5×</option></select></label>
     <div class="row">${btn('newrun', '새 회차 (장부 지우기)')}${btn('music', MUS.label())}</div>
-    <p class="dim"><small>v${VERSION} · 소리가 정보다. 이어폰을 권한다.<br>그림: FLUX 3 Klein으로 생성한 AI 그림 · 음악: MiniMax-Music3로 생성한 AI 음악 · 효과음: ElevenLabs</small></p>
+    <p class="dim"><small data-act="adlog">v${VERSION} · 소리가 정보다. 이어폰을 권한다.<br>그림: FLUX 3 Klein으로 생성한 AI 그림 · 음악: MiniMax-Music3로 생성한 AI 음악 · 효과음: ElevenLabs</small></p>
     ${hasFacts ? `<h3>이번 회차 장부</h3>${factRows(() => true)}` : ''}
     ${L.contradictions.length ? `<h3>어긋난 기록</h3><ul class="facts">${L.contradictions.map((c) => `<li>${esc(c.text)}</li>`).join('')}</ul>` : ''}</div>`;
 }

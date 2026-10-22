@@ -76,14 +76,24 @@ const PF = {
   // 다음 장으로 넘어갈 때 전면 광고 한 번. 실패·노필이어도 넘어간다. 기다리는 동안 다시 눌러도 한 번만, '처음으로'면 취소.
   between(go) {
     if (PF.adToken) return;
-    if (!PF.sdk || !PF.ad || L.done.length < PF.adGap - 1 || !PF.sdk.ads.isSupported('interstitial')) { go(); return; }
+    const skip = !PF.sdk ? 'SDK 없음' : !PF.ad ? '지면 ID 없음' : L.done.length < PF.adGap - 1 ? null
+      : !PF.sdk.ads.isSupported('interstitial') ? '앱이 전면 광고 미지원' : '';
+    if (skip !== '') { if (skip) PF.adNote(skip); go(); return; }
     const token = PF.adToken = {};
-    PF.sdk.ads.showInterstitialAsync({ placementId: PF.ad }).catch(() => {}).then(() => {
+    PF.sdk.ads.showInterstitialAsync({ placementId: PF.ad }).then((r) => {
+      PF.adNote(r && r.status === 'failed' ? `실패 ${r.reason || '이유 없음'}` : (r && r.status) || '응답 없음');
+    }, (e) => PF.adNote(`오류 ${(e && (e.reason || e.message)) || e}`)).then(() => {
       if (PF.adToken !== token) return;
       PF.adToken = null;
       go();
     });
   },
   cancelAd() { PF.adToken = null; },
+  // 광고가 왜 안 떴는지 남긴다(최근 5개). 타이틀의 버전 줄을 누르면 보인다.
+  adNote(what) {
+    const d = new Date(), t = `${d.getMonth() + 1}/${d.getDate()} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+    try { localStorage.setItem('summit-adlog', JSON.stringify([`${t} ${what}`, ...PF.adLog()].slice(0, 5))); } catch (e) { /* 저장 불가 */ }
+  },
+  adLog() { try { return JSON.parse(localStorage.getItem('summit-adlog') || '[]'); } catch (e) { return []; } },
   preload() { if (PF.sdk && PF.ad) PF.sdk.ads.loadInterstitial({ placementId: PF.ad }); },
 };
