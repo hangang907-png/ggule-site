@@ -855,7 +855,7 @@ function act(a) {
     const next = nextChapter() || (ledgerNew(), CH_ORDER[0]);
     const exp = $('#opt-exp') ? $('#opt-exp').checked : false, speed = $('#opt-speed') ? Number($('#opt-speed').value) : 1;
     const go = () => startChapter(next, exp, speed);
-    if (S && S.over) PF.between(go); else go();   // 장 끝 → 다음 장 사이에만 광고(원스토어 판)
+    if (L.done.length) PF.between(go); else go();   // 장과 장 사이에 광고(원스토어 판) — 마침 화면의 '다음'이든 타이틀의 'N장 시작'이든. 회차 첫 장은 빼고
     return;
   }
   if (k === 'newrun') {
