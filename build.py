@@ -111,15 +111,12 @@ HOME_KO = f"""
 <p>{SITE['name_ko']}는 1인 게임 개발 스튜디오입니다. 손에 금방 붙고, 한 판이 짧고, 다시 하고 싶어지는 게임을 만듭니다.</p></section>
 <h2 id="games">게임</h2>
 <div class="games">
-{game("img/seconds-out.webp", "세컨즈 아웃 대표 그림", "세컨즈 아웃", ["PC", "출시 예정"],
+{game("img/seconds-out.webp", "세컨즈 아웃 대표 그림", "세컨즈 아웃", ["PC", "모바일"],
       "마우스가 주먹이 되는 권투 게임. 손짓으로 잽·훅·어퍼를 뻗고, 코너에서 들려오는 세컨의 목소리를 따라 세컨드 윈드를 터뜨린다. 커리어는 단 한 번.",
-      "STOVE 출시 준비 중")}
-{game("img/ramen.webp", "라면 식는다 대표 그림", "라면 식는다", ["PC", "개발 중"],
+      "원스토어 판매 중 · STOVE 출시 준비 중")}
+{game("img/ramen.webp", "라면 식는다 대표 그림", "라면 식는다", ["모바일", "출시 예정"],
       "괴수 영화의 주인공이 됐다. 그런데 아주 작다. 컵라면이 불기 전에 촬영을 끝내야 하는 괴수 특촬 복싱 액션.",
-      "Steam · itch.io 출시 준비 중")}
-{game("img/easy-matgo.webp", "쉬운 맞고 타이틀 화면", "쉬운 맞고", ["모바일", "개발 중"],
-      "추천 패와 고·스톱 조언이 곁에서 알려 주는 맞고. 3인 고스톱과 기초 연습까지, 컴퓨터 상대와 짧게 한 판 즐기는 화투 카드 게임.",
-      "Google Play · 원스토어 출시 준비 중")}
+      "원스토어 출시 준비 중 · 1~3막 무료 체험")}
 </div>
 <h2 id="contact">연락</h2>
 <div class="contact">게임 문의, 버그 제보, 제휴 제안은 <a href="mailto:{SITE['email']}">{SITE['email']}</a> 로 보내 주세요.</div>
@@ -130,15 +127,12 @@ HOME_EN = f"""
 <p>{SITE['name_en']} is a one-person game studio in Korea. We make games that are quick to learn, short to play and hard to put down.</p></section>
 <h2 id="games">Games</h2>
 <div class="games">
-{game("../img/seconds-out.webp", "Seconds Out key art", "Seconds Out", ["PC", "Coming soon"],
+{game("../img/seconds-out.webp", "Seconds Out key art", "Seconds Out", ["PC", "Mobile"],
       "Box with your mouse and fight with your feet. A boxing roguelike career where every round is read, timed and earned.",
-      "Steam · Windows / Linux")}
-{game("../img/ramen.webp", "Ramen's Getting Cold key art", "Ramen's Getting Cold", ["PC", "In development"],
+      "ONE store (Korea) · Steam coming soon")}
+{game("../img/ramen.webp", "Ramen's Getting Cold key art", "Ramen's Getting Cold", ["Mobile", "Coming soon"],
       "Kaiju-movie boxing. One take = one cup of instant ramen. You are the monster — a very small one.",
-      "Steam · itch.io")}
-{game("../img/easy-matgo.webp", "Easy Matgo title screen", "Easy Matgo", ["Mobile", "In development"],
-      "The Korean flower-card game Matgo and three-player Go-Stop against computer opponents, with a beginner's practice mode.",
-      "Google Play · ONE store")}
+      "ONE store (Korea) · free first three acts")}
 </div>
 <h2 id="contact">Contact</h2>
 <div class="contact">For support, bug reports or business inquiries, email <a href="mailto:{SITE['email']}">{SITE['email']}</a>.</div>
@@ -157,11 +151,12 @@ PRIV_KO = f"""
 <h2>2. 게임별 처리 현황</h2>
 <div class="tbl"><table>
 <tr><th>게임</th><th>스튜디오가 받는 정보</th><th>기기에 저장되는 정보</th><th>외부 서비스</th></tr>
-<tr><td>라면 식는다 (PC)</td><td>없음</td><td>설정, 기록</td><td>배포 스토어(Steam, itch.io)</td></tr>
+<tr><td>라면 식는다 (Android)</td><td>없음</td><td>설정, 기록, 구매 여부(본편)</td><td>배포 스토어(원스토어, Google Play)의 인앱 결제</td></tr>
 <tr><td>Seconds Out (PC)</td><td>없음</td><td>설정, 커리어 진행, 기록</td><td>Steam (클라우드 저장·도전 과제를 쓰는 경우 Valve가 처리)</td></tr>
 <tr><td>쉬운 맞고 (Android)</td><td>없음</td><td>설정, 프로필(레벨·기록), 구매 여부(광고 제거)</td><td>Google AdMob (광고), 배포 스토어(Google Play, 원스토어)</td></tr>
 </table></div>
 <p>게임을 지우거나 브라우저 데이터를 지우면 기기에 저장된 정보도 함께 지워집니다. 스토어에서 구매·결제할 때의 정보는 각 스토어(Valve, itch.io, Google, 원스토어)가 자신의 방침에 따라 처리하며 스튜디오는 이용자의 결제 정보를 받지 않습니다.</p>
+<p>라면 식는다는 어린이도 즐기는 게임입니다. 이용자에게서 개인정보나 기기 식별자를 받지 않고, 광고·외부 링크·채팅이 없으며, 본편 구매 전에 어른 확인을 거칩니다.</p>
 
 <h2>3. 문의 처리</h2>
 <div class="tbl"><table>
@@ -212,10 +207,11 @@ PRIV_EN = f"""
 <div class="tbl"><table>
 <tr><th>Game</th><th>Data we receive</th><th>Stored on your device</th><th>Third-party services</th></tr>
 <tr><td>Seconds Out (PC)</td><td>None</td><td>Settings, career progress, records</td><td>Steam (Valve processes cloud saves and achievements if used)</td></tr>
-<tr><td>Ramen's Getting Cold (PC)</td><td>None</td><td>Settings, records</td><td>Store you bought it from (Steam, itch.io)</td></tr>
+<tr><td>Ramen's Getting Cold (Android)</td><td>None</td><td>Settings, records, purchase status (full game)</td><td>In-app purchase by the store (ONE store, Google Play)</td></tr>
 <tr><td>Easy Matgo (Android)</td><td>None</td><td>Settings, profile (level, records), purchase status (ad removal)</td><td>Google AdMob (ads), Google Play, ONE store</td></tr>
 </table></div>
 <p>Uninstalling a game or clearing browser data deletes this local data. Purchases are handled by each store (Valve, itch.io, Google, ONE store) under their own policies; we never receive your payment details.</p>
+<p>Ramen's Getting Cold is made to be enjoyed by children too. It collects no personal data or device identifiers from players, has no ads, external links or chat, and asks for a grown-up check before the full-game purchase.</p>
 
 <h2>3. Support emails</h2>
 <p>When you contact us we process your email address, name (if given), message and attachments to answer you and to handle refunds or disputes. We delete them one year after the conversation ends, except records of consumer complaints and disputes, which Korean law requires us to keep for three years.</p>
@@ -259,8 +255,8 @@ def main():
     if play.exists():
         shutil.copytree(play, OUT / "play")
     w = lambda p, s: ((OUT / p).parent.mkdir(parents=True, exist_ok=True), (OUT / p).write_text(s))
-    w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "1인 게임 개발 스튜디오. 세컨즈 아웃, 라면 식는다, 쉬운 맞고.", HOME_KO, 0))
-    w("en/index.html", page("en", f"{SITE['name_en']} — indie game studio", "A one-person game studio in Korea. Seconds Out, Ramen's Getting Cold, Easy Matgo.", HOME_EN, 1))
+    w("index.html", page("ko", f"{SITE['name_ko']} — 1인 게임 개발 스튜디오", "1인 게임 개발 스튜디오. 세컨즈 아웃, 라면 식는다.", HOME_KO, 0))
+    w("en/index.html", page("en", f"{SITE['name_en']} — indie game studio", "A one-person game studio in Korea. Seconds Out, Ramen's Getting Cold.", HOME_EN, 1))
     w("privacy/index.html", page("ko", f"개인정보처리방침 — {SITE['name_ko']}", "꿀 스튜디오 게임의 개인정보처리방침", PRIV_KO, 1))
     w("en/privacy/index.html", page("en", f"Privacy Policy — {SITE['name_en']}", "Privacy policy for STUDIO GGULE games", PRIV_EN, 2))
     w("404.html", NOT_FOUND)
