@@ -114,9 +114,9 @@ HOME_KO = f"""
 {game("img/seconds-out.webp", "세컨즈 아웃 대표 그림", "세컨즈 아웃", ["PC", "모바일"],
       "마우스가 주먹이 되는 권투 게임. 손짓으로 잽·훅·어퍼를 뻗고, 코너에서 들려오는 세컨의 목소리를 따라 세컨드 윈드를 터뜨린다. 커리어는 단 한 번.",
       "원스토어 판매 중 · STOVE 출시 준비 중")}
-{game("img/ramen.webp", "라면 식는다 대표 그림", "라면 식는다", ["모바일", "출시 예정"],
+{game("img/ramen.webp", "라면 식는다 대표 그림", "라면 식는다", ["모바일", "판매 중"],
       "괴수 영화의 주인공이 됐다. 그런데 아주 작다. 컵라면이 불기 전에 촬영을 끝내야 하는 괴수 특촬 복싱 액션.",
-      "원스토어 출시 준비 중 · 1~3막 무료 체험")}
+      "원스토어 판매 중 · 1~3막 무료 체험")}
 </div>
 <h2 id="contact">연락</h2>
 <div class="contact">게임 문의, 버그 제보, 제휴 제안은 <a href="mailto:{SITE['email']}">{SITE['email']}</a> 로 보내 주세요.</div>
@@ -130,9 +130,9 @@ HOME_EN = f"""
 {game("../img/seconds-out.webp", "Seconds Out key art", "Seconds Out", ["PC", "Mobile"],
       "Box with your mouse and fight with your feet. A boxing roguelike career where every round is read, timed and earned.",
       "ONE store (Korea) · Steam coming soon")}
-{game("../img/ramen.webp", "Ramen's Getting Cold key art", "Ramen's Getting Cold", ["Mobile", "Coming soon"],
+{game("../img/ramen.webp", "Ramen's Getting Cold key art", "Ramen's Getting Cold", ["Mobile", "Out now"],
       "Kaiju-movie boxing. One take = one cup of instant ramen. You are the monster — a very small one.",
-      "ONE store (Korea) · free first three acts")}
+      "Out now on ONE store (Korea) · free first three acts")}
 </div>
 <h2 id="contact">Contact</h2>
 <div class="contact">For support, bug reports or business inquiries, email <a href="mailto:{SITE['email']}">{SITE['email']}</a>.</div>
