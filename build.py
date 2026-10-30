@@ -152,6 +152,7 @@ PRIV_KO = f"""
 <div class="tbl"><table>
 <tr><th>게임</th><th>스튜디오가 받는 정보</th><th>기기에 저장되는 정보</th><th>외부 서비스</th></tr>
 <tr><td>라면 식는다 (Android)</td><td>없음</td><td>설정, 기록, 구매 여부(본편)</td><td>배포 스토어(원스토어, Google Play)의 인앱 결제</td></tr>
+<tr><td>한 칼 (Android)</td><td>없음</td><td>설정, 기록, 마지막 판 다시 보기, 구매 여부(본편)</td><td>배포 스토어(원스토어)의 인앱 결제</td></tr>
 <tr><td>Seconds Out (PC)</td><td>없음</td><td>설정, 커리어 진행, 기록</td><td>Steam (클라우드 저장·도전 과제를 쓰는 경우 Valve가 처리)</td></tr>
 <tr><td>쉬운 맞고 (Android)</td><td>없음</td><td>설정, 프로필(레벨·기록), 구매 여부(광고 제거)</td><td>Google AdMob (광고), 배포 스토어(Google Play, 원스토어)</td></tr>
 </table></div>
@@ -208,6 +209,7 @@ PRIV_EN = f"""
 <tr><th>Game</th><th>Data we receive</th><th>Stored on your device</th><th>Third-party services</th></tr>
 <tr><td>Seconds Out (PC)</td><td>None</td><td>Settings, career progress, records</td><td>Steam (Valve processes cloud saves and achievements if used)</td></tr>
 <tr><td>Ramen's Getting Cold (Android)</td><td>None</td><td>Settings, records, purchase status (full game)</td><td>In-app purchase by the store (ONE store, Google Play)</td></tr>
+<tr><td>Han Kal (Android)</td><td>None</td><td>Settings, records, last-round replay, purchase status (full game)</td><td>In-app purchase by the store (ONE store)</td></tr>
 <tr><td>Easy Matgo (Android)</td><td>None</td><td>Settings, profile (level, records), purchase status (ad removal)</td><td>Google AdMob (ads), Google Play, ONE store</td></tr>
 </table></div>
 <p>Uninstalling a game or clearing browser data deletes this local data. Purchases are handled by each store (Valve, itch.io, Google, ONE store) under their own policies; we never receive your payment details.</p>
