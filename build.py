@@ -145,17 +145,19 @@ PRIV_KO = f"""
 
 <h2>1. 요약</h2>
 <p>스튜디오는 게임 안에서 회원가입·로그인을 받지 않으며 이름, 연락처 같은 개인정보를 직접 수집하지 않습니다. 게임 설정과 진행 기록은 이용자의 기기(웹 게임은 브라우저 저장소)에만 저장되고 스튜디오로 전송되지 않습니다. 예외는 아래 두 가지입니다.</p>
-<ul><li>광고가 들어간 모바일 게임(쉬운 맞고): 광고 제공을 Google에 맡기며, Google이 광고 ID 등을 처리합니다(4항).</li>
+<ul><li>광고가 들어간 모바일 게임·앱(쉬운 맞고, 픽스핏): 광고 제공을 Google에 맡기며, Google이 광고 ID 등을 처리합니다(4항).</li>
 <li>이용자가 이메일로 문의한 경우: 답변에 필요한 범위에서 이메일 주소와 문의 내용을 처리합니다(3항).</li></ul>
 
-<h2>2. 게임별 처리 현황</h2>
+<h2>2. 게임·앱별 처리 현황</h2>
 <div class="tbl"><table>
-<tr><th>게임</th><th>스튜디오가 받는 정보</th><th>기기에 저장되는 정보</th><th>외부 서비스</th></tr>
+<tr><th>게임·앱</th><th>스튜디오가 받는 정보</th><th>기기에 저장되는 정보</th><th>외부 서비스</th></tr>
 <tr><td>라면 식는다 (Android)</td><td>없음</td><td>설정, 기록, 구매 여부(본편)</td><td>배포 스토어(원스토어, Google Play)의 인앱 결제</td></tr>
 <tr><td>한 칼 (Android)</td><td>없음</td><td>설정, 기록, 마지막 판 다시 보기, 구매 여부(본편)</td><td>배포 스토어(원스토어)의 인앱 결제</td></tr>
 <tr><td>Seconds Out (PC)</td><td>없음</td><td>설정, 커리어 진행, 기록</td><td>Steam (클라우드 저장·도전 과제를 쓰는 경우 Valve가 처리)</td></tr>
 <tr><td>쉬운 맞고 (Android)</td><td>없음</td><td>설정, 프로필(레벨·기록), 구매 여부(광고 제거)</td><td>Google AdMob (광고), 배포 스토어(Google Play, 원스토어)</td></tr>
+<tr><td>픽스핏 PixFit (Android)</td><td>없음</td><td>설정, 최근 작업 목록(결과 파일 위치·적용한 옵션), 저장한 제출 조건, 누적 사용 횟수</td><td>Google AdMob (광고), 배포 스토어(Google Play)</td></tr>
 </table></div>
+<p>픽스핏은 이용자가 고른 사진·파일을 기기 안에서만 변환하며, 사진과 그 안의 위치정보(EXIF)를 스튜디오나 다른 서버로 보내지 않습니다. 사진은 이용자가 직접 고른 것만 읽습니다.</p>
 <p>게임을 지우거나 브라우저 데이터를 지우면 기기에 저장된 정보도 함께 지워집니다. 스토어에서 구매·결제할 때의 정보는 각 스토어(Valve, itch.io, Google, 원스토어)가 자신의 방침에 따라 처리하며 스튜디오는 이용자의 결제 정보를 받지 않습니다.</p>
 <p>라면 식는다는 어린이도 즐기는 게임입니다. 이용자에게서 개인정보나 기기 식별자를 받지 않고, 광고·외부 링크·채팅이 없으며, 본편 구매 전에 어른 확인을 거칩니다.</p>
 
@@ -165,13 +167,13 @@ PRIV_KO = f"""
 <tr><td>문의·버그 제보 답변, 환불 등 소비자 분쟁 처리</td><td>이메일 주소, 이름(적은 경우), 문의 내용과 첨부 파일</td><td>답변 완료 후 1년 뒤 파기. 단 「전자상거래 등에서의 소비자보호에 관한 법률」에 따른 소비자 불만·분쟁 처리 기록은 3년</td></tr>
 </table></div>
 
-<h2>4. 광고 (쉬운 맞고)</h2>
-<p>쉬운 맞고는 무료 게임 운영을 위해 판이 끝난 뒤 전면 광고를 보여 주며, 광고 게재를 아래와 같이 위탁합니다.</p>
+<h2>4. 광고 (쉬운 맞고, 픽스핏)</h2>
+<p>쉬운 맞고는 무료 게임 운영을 위해 판이 끝난 뒤 전면 광고를, 픽스핏은 작업 결과 화면 아래 배너와 작업을 마친 뒤 전면 광고를 보여 주며, 광고 게재를 아래와 같이 위탁합니다.</p>
 <div class="tbl"><table>
 <tr><th>수탁자</th><th>위탁 업무</th><th>처리 항목</th><th>보유 기간</th></tr>
 <tr><td>Google LLC (AdMob) · 미국</td><td>광고 게재·측정, 부정 클릭 방지</td><td>광고 ID, 기기·앱 정보, IP 주소, 광고 노출·클릭 정보</td><td>Google 개인정보처리방침에 따름</td></tr>
 </table></div>
-<p>처음 실행할 때 광고 개인정보 동의 창이 나오며, 맞춤형 광고 동의는 게임 설정의 [광고 개인정보 설정]에서 언제든 바꿀 수 있습니다. 기기 설정(설정 → 개인정보 보호 → 광고)에서 광고 ID를 재설정하거나 삭제할 수 있습니다. 이 정보는 정보통신망을 통해 앱 실행 중 Google 서버로 전송됩니다. 자세한 내용: <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>, <a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google이 파트너 앱의 정보를 사용하는 방법</a>.</p>
+<p>처음 실행할 때 광고 개인정보 동의 창이 나오며, 맞춤형 광고 동의는 게임·앱 설정의 [광고 개인정보 설정]에서 언제든 바꿀 수 있습니다. 기기 설정(설정 → 개인정보 보호 → 광고)에서 광고 ID를 재설정하거나 삭제할 수 있습니다. 이 정보는 정보통신망을 통해 앱 실행 중 Google 서버로 전송됩니다. 자세한 내용: <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>, <a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google이 파트너 앱의 정보를 사용하는 방법</a>.</p>
 
 <h2>5. 제3자 제공</h2>
 <p>스튜디오는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 법령에 따라 수사기관 등이 요구하는 경우는 예외입니다.</p>
@@ -201,25 +203,27 @@ PRIV_EN = f"""
 
 <h2>1. Summary</h2>
 <p>Our games have no accounts or logins, and we do not collect your name, contact details or other personal information. Settings and progress are stored only on your device (or in your browser for web games) and are never sent to us. There are two exceptions:</p>
-<ul><li>Our ad-supported mobile game (Easy Matgo) uses Google AdMob, which processes your advertising ID and related data (section 4).</li>
+<ul><li>Our ad-supported mobile game and app (Easy Matgo, PixFit) use Google AdMob, which processes your advertising ID and related data (section 4).</li>
 <li>If you email us, we use your email address and message to reply (section 3).</li></ul>
 
-<h2>2. Per game</h2>
+<h2>2. Per game and app</h2>
 <div class="tbl"><table>
-<tr><th>Game</th><th>Data we receive</th><th>Stored on your device</th><th>Third-party services</th></tr>
+<tr><th>Game / app</th><th>Data we receive</th><th>Stored on your device</th><th>Third-party services</th></tr>
 <tr><td>Seconds Out (PC)</td><td>None</td><td>Settings, career progress, records</td><td>Steam (Valve processes cloud saves and achievements if used)</td></tr>
 <tr><td>Ramen's Getting Cold (Android)</td><td>None</td><td>Settings, records, purchase status (full game)</td><td>In-app purchase by the store (ONE store, Google Play)</td></tr>
 <tr><td>Han Kal (Android)</td><td>None</td><td>Settings, records, last-round replay, purchase status (full game)</td><td>In-app purchase by the store (ONE store)</td></tr>
 <tr><td>Easy Matgo (Android)</td><td>None</td><td>Settings, profile (level, records), purchase status (ad removal)</td><td>Google AdMob (ads), Google Play, ONE store</td></tr>
+<tr><td>PixFit (Android)</td><td>None</td><td>Settings, recent jobs (result file location, options used), saved submission presets, usage count</td><td>Google AdMob (ads), Google Play</td></tr>
 </table></div>
+<p>PixFit converts the photos and files you pick entirely on your device. Your photos and their location data (EXIF) are never sent to us or any other server. It only reads the photos you choose.</p>
 <p>Uninstalling a game or clearing browser data deletes this local data. Purchases are handled by each store (Valve, itch.io, Google, ONE store) under their own policies; we never receive your payment details.</p>
 <p>Ramen's Getting Cold is made to be enjoyed by children too. It collects no personal data or device identifiers from players, has no ads, external links or chat, and asks for a grown-up check before the full-game purchase.</p>
 
 <h2>3. Support emails</h2>
 <p>When you contact us we process your email address, name (if given), message and attachments to answer you and to handle refunds or disputes. We delete them one year after the conversation ends, except records of consumer complaints and disputes, which Korean law requires us to keep for three years.</p>
 
-<h2>4. Advertising (Easy Matgo)</h2>
-<p>Easy Matgo shows full-screen ads between rounds, served by Google LLC (AdMob, USA). Google processes your advertising ID, device and app information, IP address and ad interaction data to serve and measure ads and prevent fraud, and retains it under its own policy. A consent form appears on first launch; you can change your choice at any time under Settings → Ad privacy settings in the game, and you can reset or delete your advertising ID in your device settings. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a>.</p>
+<h2>4. Advertising (Easy Matgo, PixFit)</h2>
+<p>Easy Matgo shows full-screen ads between rounds and PixFit shows a banner on the result screen and a full-screen ad after a finished task; ads are served by Google LLC (AdMob, USA). Google processes your advertising ID, device and app information, IP address and ad interaction data to serve and measure ads and prevent fraud, and retains it under its own policy. A consent form appears on first launch; you can change your choice at any time under Settings → Ad privacy settings in the game or app, and you can reset or delete your advertising ID in your device settings. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a>.</p>
 
 <h2>5. Sharing</h2>
 <p>We do not sell or share your personal information with anyone else, except when required by law.</p>
