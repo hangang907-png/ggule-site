@@ -15,8 +15,8 @@ SITE = {
     "rep_en": "Gyuhan Lee",
     "biz_no": "270-24-02767",
     "mail_order_no": "",  # 통신판매업 신고번호는 영업 연락 때문에 사이트에 안 싣는다(10-21 사장님 결정, 주소도)
-    "privacy_effective": "2026년 10월 16일",
-    "privacy_effective_en": "October 16, 2026",
+    "privacy_effective": "2026년 12월 2일",
+    "privacy_effective_en": "December 2, 2026",
 }
 
 CSS = """
@@ -171,7 +171,7 @@ PRIV_KO = f"""
 <p>쉬운 맞고는 무료 게임 운영을 위해 판이 끝난 뒤 전면 광고를, 꿀사이즈는 작업 결과 화면 아래 배너와 결과 화면을 나갈 때 전면 광고를 보여 주며, 광고 게재를 아래와 같이 위탁합니다.</p>
 <div class="tbl"><table>
 <tr><th>수탁자</th><th>위탁 업무</th><th>처리 항목</th><th>보유 기간</th></tr>
-<tr><td>Google LLC (AdMob) · 미국</td><td>광고 게재·측정, 부정 클릭 방지</td><td>광고 ID, 기기·앱 정보, IP 주소(와 IP로 짐작한 대략적 위치), 광고 노출·클릭 정보</td><td>Google 개인정보처리방침에 따름</td></tr>
+<tr><td>Google LLC (AdMob) · 미국</td><td>광고 게재·측정·분석, 부정 클릭 방지</td><td>광고 ID·앱 세트 ID, 기기·앱 정보와 진단 정보, IP 주소와 IP로 짐작한 대략적 위치, 앱 실행·탭·광고 노출·클릭 정보</td><td>Google 개인정보처리방침에 따름</td></tr>
 </table></div>
 <p>처음 실행할 때 광고 개인정보 동의 창이 나오며, 맞춤형 광고 동의는 게임·앱 설정의 [광고 개인정보 설정]에서 언제든 바꿀 수 있습니다. 기기 설정(설정 → 개인정보 보호 → 광고)에서 광고 ID를 재설정하거나 삭제할 수 있습니다. 이 정보는 정보통신망을 통해 앱 실행 중 Google 서버로 전송됩니다. 자세한 내용: <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>, <a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google이 파트너 앱의 정보를 사용하는 방법</a>.</p>
 
@@ -223,7 +223,7 @@ PRIV_EN = f"""
 <p>When you contact us we process your email address, name (if given), message and attachments to answer you and to handle refunds or disputes. We delete them one year after the conversation ends, except records of consumer complaints and disputes, which Korean law requires us to keep for three years.</p>
 
 <h2>4. Advertising (Easy Matgo, HoneySize)</h2>
-<p>Easy Matgo shows full-screen ads between rounds and HoneySize shows a banner on the result screen and a full-screen ad when you leave a task's result screen; ads are served by Google LLC (AdMob, USA). Google processes your advertising ID, device and app information, IP address (and approximate location inferred from it) and ad interaction data to serve and measure ads and prevent fraud, and retains it under its own policy. A consent form appears on first launch; you can change your choice at any time under Settings → Ad privacy settings in the game or app, and you can reset or delete your advertising ID in your device settings. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a>.</p>
+<p>Easy Matgo shows full-screen ads between rounds and HoneySize shows a banner on the result screen and a full-screen ad when you leave a task's result screen; ads are served by Google LLC (AdMob, USA). Google processes your advertising ID and app set ID, device and app information including diagnostics, your IP address and the approximate location inferred from it, and app launch, tap and ad interaction data to serve, measure and analyze ads and prevent fraud, and retains it under its own policy. A consent form appears on first launch; you can change your choice at any time under Settings → Ad privacy settings in the game or app, and you can reset or delete your advertising ID in your device settings. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner apps</a>.</p>
 
 <h2>5. Sharing</h2>
 <p>We do not sell or share your personal information with anyone else, except when required by law.</p>
